@@ -5,22 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>run javascript online</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 <body>
-    <div>
-        <h1>Run javascript online</h1>
-        <p>Run your javascript code online with this simple tool.</p>
-        <form id="codeForm">
-            <textarea name="codeInput" id="codeInput" rows="10" cols="50" placeholder="type your js code here"></textarea>
-            <button type="button" id="runBtn">Run</button>
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fab fa-js-square text-warning fs-2 me-2"></i>
+      <span class="fw-bold">JS Runner</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home"><i class="bi bi-house-door me-1"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-file-earmark-text me-1"></i>Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#examples"><i class="bi bi-code-slash me-1"></i>Examples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-envelope me-1"></i>Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<section id="home">
+    <h1>Run <span>JavaScript</span> Online</h1>
+    <p>Execute your JavaScript code instantly with our powerful online runner. No setup required. Perfect for testing, learning, and prototyping.</p>
+
+    <div>
+        <button type="button" class="btn btn-primary">
+            <i class="bi bi-lightning-charge-fill"></i>
+            Try it Now
+        </button>
+        <a href="examples" type="button" class="btn btn-primary">
+            <i class="bi bi-book"></i>
+            View Examples
+        </a>
+    </div>
+</section>
+
+<section id="content">
+    <form id="codeForm">
+            <label for="codeInput" class="form-label"><i class="bi bi-code-slash me-1"></i></label>
+            <textarea class="form-control" name="codeInput" id="codeInput" rows="10" cols="10" placeholder="type your js code here"></textarea>
+            <div class="contentBtns">
+                <button type="button" id="runBtn" class="btn btn-success">
+                    <i class="bi bi-play"></i>
+                    Run
+                </button>
+                <button type="button" id="clearBtn" class="btn btn-danger">
+                    <i class="bi bi-trash"></i>
+                    Clear
+                </button>
+            </div>
         </form>
-        <div id="output">
+
+        <div class="output">
             <h2>Output:</h2>
-            <iframe id="outputContent"></iframe>
+            <div>
+                <i class="bi bi-terminal"></i>
+            </div>
+            <iframe class="embed-responsive-item" id="outputContent"></iframe>
 
         </div>
-    </div>
+</section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
