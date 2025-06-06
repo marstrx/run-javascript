@@ -29,13 +29,10 @@
           <a class="nav-link active" href="#home"><i class="bi bi-house-door me-1"></i>Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-file-earmark-text me-1"></i>Docs</a>
+          <a class="nav-link" href="#documents"><i class="bi bi-file-earmark-text me-1"></i>Docs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#examples"><i class="bi bi-code-slash me-1"></i>Examples</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-envelope me-1"></i>Contact</a>
         </li>
       </ul>
     </div>
@@ -47,20 +44,21 @@
     <h1>Run <span>JavaScript</span> Online</h1>
     <p>Execute your JavaScript code instantly with our powerful online runner. No setup required. Perfect for testing, learning, and prototyping.</p>
 
-    <div>
-        <button type="button" class="btn btn-primary">
+    <div class="homeBtns">
+        <a href="#content" type="button" class="btn btn-primary">
             <i class="bi bi-lightning-charge-fill"></i>
             Try it Now
-        </button>
-        <a href="examples" type="button" class="btn btn-primary">
-            <i class="bi bi-book"></i>
-            View Examples
         </a>
+        <a href="#examples" class="btn btn-warning">
+    <i class="bi bi-book"></i>
+    View Examples
+</a>
+
     </div>
 </section>
 
 <section id="content">
-    <form id="codeForm">
+    <form class="codeForm">
             <label for="codeInput" class="form-label"><i class="bi bi-code-slash me-1"></i></label>
             <textarea class="form-control" name="codeInput" id="codeInput" rows="10" cols="10" placeholder="type your js code here"></textarea>
             <div class="contentBtns">
@@ -76,14 +74,75 @@
         </form>
 
         <div class="output">
-            <h2>Output:</h2>
-            <div>
-                <i class="bi bi-terminal"></i>
-            </div>
+            <h2>Output <i class="bi bi-terminal"></i></h2>
             <iframe class="embed-responsive-item" id="outputContent"></iframe>
-
         </div>
 </section>
+
+<section id="documents">
+    <h2>Documentation</h2>
+   <div class="docsSides">
+     <div class="docsLeftSide">
+        <img id="docsImage" src="/RUNJSONLINE/images/docs.jpg" alt="">
+    </div>
+    <div class="docsRightSide">
+        <h3>Learn how to use the JS Runner effectively with our comprehensive documentation. Get started with examples, tips, and best practices.</h3>
+    
+     <h4>
+        all the code you write here will be executed in a sandbox environment, so you can safely test your JavaScript without affecting your local 
+     </h4>
+    
+
+    </div>
+   </div>
+</section>
+
+
+<section id="examples">
+    <h2>Examples</h2>
+
+    <div class="examplesLeftSide">
+        <p>Simple JavaScript code to Try</p>
+        <img src="/RUNJSONLINE/images/run.png" alt="Run Button">
+    </div>
+
+    <div class="examplesRightSide">
+        <div>
+            <h3>Example 1</h3>
+            <pre><code>
+&lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;script&gt;
+document.write("Hello, Marstrx!");
+&lt;/script&gt;
+            </code></pre>
+        </div>
+
+        <div>
+            <h3>Example 2</h3>
+            <pre><code>
+&lt;button onclick="alert('Clicked!')"&gt;Click Me&lt;/button&gt;
+            </code></pre>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+  <div class="footer-content">
+    <div>
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> JS Runner. All rights reserved.</p>
+      <p>Created by <a href="https://github.com/marstrx" target="_blank">Marstrx</a></p>
+    </div>
+    <div>
+      <a href="https://github.com/marstrx" target="_blank"><i class="bi bi-github"></i> GitHub</a>
+      <a href="#"><i class="bi bi-twitter-x"></i> </a>
+      <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
+      <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+    </div>
+  </div>
+</footer>
+
+
 
 
 
